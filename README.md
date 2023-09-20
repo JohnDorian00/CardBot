@@ -1,14 +1,14 @@
 # CardBot
 
-Структура:
-1) /backend
-бэк на golang
+Структура сервисов в компоуз:
+1) redis (host:6379)
+бд 
 
-2) /frontend:
-фронт на реакте
+2) redis-cli
+gui для редиса (host:8001)
 
-3) /nxing:
-обратный прокси
+3) python_app
+бот на python
 
 
 
