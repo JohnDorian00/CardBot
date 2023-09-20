@@ -1,10 +1,10 @@
 # Docker Makefile
 up:
-	docker-compose up -d --build
+	docker-compose down
+	docker-compose --env-file .env.dev  up -d --build
+
+prod:
+	docker-compose --env-file .env.prod  up -d --build
 
 down:
 	docker-compose down
-
-restart:
-	docker-compose down
-	docker-compose up -d --build

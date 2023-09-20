@@ -1,6 +1,7 @@
-from redis import Redis
+import sys
+from redis import StrictRedis
 
-redis = Redis(host='redis', port=6379)
+redis = StrictRedis(host='redis', port=6379, password='test2')
 
 
 def test():
@@ -10,4 +11,5 @@ def test():
 
 
 if __name__ == "__main__":
+    print('pass is ', sys.argv[1])
     print('Hello from bot ', test())
