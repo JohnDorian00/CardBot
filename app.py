@@ -1,5 +1,9 @@
-import sys
+import os
 from redis import StrictRedis
+
+redis_pass = os.environ['REDIS_PASSWORD']
+token = os.environ['TOKEN']
+
 
 redis = StrictRedis(host='redis', port=6379, password='test2')
 
@@ -11,5 +15,6 @@ def test():
 
 
 if __name__ == "__main__":
-    print('pass is ', sys.argv[1])
+    print('pass is ', redis_pass)
+    print('token is ', token)
     print('Hello from bot ', test())

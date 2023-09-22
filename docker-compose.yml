@@ -35,6 +35,9 @@ services:
       - app-tier
     command:
       python app.py $REDIS_PASSWORD
+    environment:
+      TOKEN: $TOKEN
+      REDIS_PASSWORD: $REDIS_PASSWORD
 
 networks:
   app-tier:
